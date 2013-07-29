@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/LogUpdate_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent" >
+		<RelativeLayout android:layout_marginLeft="10dp" android:id="@+id/WeightLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<TextView android:text="@string/weightLabel" android:id="@+id/TextView01" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+			<TextView android:text="@string/spacer" android:id="@+id/WeightSpacer" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/TextView01"/>
+			<EditText android:id="@+id/LogUpdate_weight" android:inputType="numberDecimal" android:minWidth="100dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/WeightSpacer"/>
+		</RelativeLayout>
+		<RelativeLayout android:layout_marginLeft="10dp" android:id="@+id/BMILayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/WeightLayout">
+			<TextView android:text="@string/calculatedBMI" android:layout_centerVertical="true" android:id="@+id/BMILabel" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+			<TextView android:text="@string/spacer" android:id="@+id/BMISpacer" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/BMILabel"/>
+			<TextView android:inputType="numberDecimal" android:id="@+id/LogUpdate_BMIText" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/BMISpacer" />
+		</RelativeLayout>
+		<RelativeLayout android:layout_marginLeft="10dp" android:id="@+id/SizeLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/BMILayout">
+			<TextView android:text="@string/size" android:layout_centerVertical="true" android:id="@+id/TextView02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/WeightLayout"/>
+			<TextView android:text="@string/spacer" android:id="@+id/SizeSpacer" android:layout_centerVertical="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/TextView02"/>
+			<EditText android:id="@+id/LogUpdate_size" android:minWidth="100dp" android:inputType="numberDecimal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/SizeSpacer"/>
+		</RelativeLayout>
+		<RelativeLayout android:layout_marginLeft="10dp" android:id="@+id/DateLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/SizeLayout">
+			<TextView android:text="@string/date" android:id="@+id/TextView03" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+			<TextView android:text="@string/spacer" android:id="@+id/DateSpacer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/TextView03"/>
+			<DatePicker android:id="@+id/LogUpdate_DatePicker" android:calendarViewShown="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/DateSpacer"/>
+		</RelativeLayout>
+		<RelativeLayout android:layout_marginLeft="10dp" android:id="@+id/buttonsLayout" android:layout_centerHorizontal="true" android:layout_below="@+id/DateLayout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+	    	<Button android:text="@string/update" android:id="@+id/LogUpdate_Button_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	    	<ImageButton
+			    android:id="@+id/LogUpdate_Deletebutton"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:contentDescription="@string/delete"
+			    android:src="@drawable/content_discard"
+			    android:layout_toRightOf="@+id/LogUpdate_Button_ok" />
+			<Button android:text="@string/cancel" android:id="@+id/LogUpdate_Button_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/LogUpdate_Deletebutton"/>
+		</RelativeLayout>
+</RelativeLayout>

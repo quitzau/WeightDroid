@@ -1,0 +1,22 @@
+package eu.quitzau.android.weightdroid;
+
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+
+public class NoProfileOnClickListener implements OnClickListener {
+
+	private Activity activity;  
+	
+	public NoProfileOnClickListener(Activity activity)
+	{
+		this.activity = activity;
+	}
+	
+	@Override
+	public void onClick(DialogInterface dialog, int which) {
+		activity.startActivity(new Intent(activity, PreferenceActivity.class));
+	}
+
+}

@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/itemMenu"
+        android:icon="@drawable/prefs"
+        android:title="@string/menuPreferences" android:showAsAction="always" android:visible="true">
+        <menu>
+            <item
+                android:id="@+id/itemPrefs"
+                android:enabled="true"
+                android:title="@string/preferences"
+                android:visible="true"/>
+            <item
+                android:id="@+id/itemImport"
+                android:title="@string/import_export"/>
+        </menu>
+    </item>
+
+</menu>

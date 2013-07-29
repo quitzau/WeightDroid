@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="green">#00cc00</color>
+<color name="grey">#cccccc</color>
+<color name="red">#ff0000</color>
+
+<color name="defaultTextColor">#000000</color>
+	<color name="android_green">#FFA4C639</color>
+	<color name="honeycombish_blue">#FF58BAED</color>
+	<color name="soft_grey">#FF777777</color>
+	<color name="background">#FFEFEFEF</color>
+</resources>

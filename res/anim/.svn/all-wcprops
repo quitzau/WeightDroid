@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Android/!svn/ver/3/WeightDroid/res/anim
+END
+push_in_from_left.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Android/!svn/ver/3/WeightDroid/res/anim/push_in_from_left.xml
+END
+push_in_from_right.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/Android/!svn/ver/3/WeightDroid/res/anim/push_in_from_right.xml
+END
+right2left.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Android/!svn/ver/5/WeightDroid/res/anim/right2left.xml
+END
+push_out_to_right.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/Android/!svn/ver/3/WeightDroid/res/anim/push_out_to_right.xml
+END
+left2right.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Android/!svn/ver/5/WeightDroid/res/anim/left2right.xml
+END
+stay_still.xml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/Android/!svn/ver/3/WeightDroid/res/anim/stay_still.xml
+END
+push_out_to_left.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/Android/!svn/ver/3/WeightDroid/res/anim/push_out_to_left.xml
+END

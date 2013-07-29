@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/utilities
+END
+ExternalFileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/utilities/ExternalFileUtil.java
+END
+ExternalFileException.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/utilities/ExternalFileException.java
+END
+GraphWebHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/utilities/GraphWebHandler.java
+END

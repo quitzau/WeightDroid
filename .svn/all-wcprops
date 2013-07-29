@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/Android/!svn/ver/2/WeightDroid
+END
+default.properties
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Android/!svn/ver/3/WeightDroid/default.properties
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/Android/!svn/ver/6/WeightDroid/AndroidManifest.xml
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/Android/!svn/ver/6/WeightDroid/project.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/Android/!svn/ver/3/WeightDroid/.project
+END
+WeightDroid.iml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/Android/!svn/ver/3/WeightDroid/WeightDroid.iml
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/Android/!svn/ver/6/WeightDroid/.classpath
+END

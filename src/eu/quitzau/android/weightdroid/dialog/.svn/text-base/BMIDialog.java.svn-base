@@ -1,0 +1,118 @@
+package eu.quitzau.android.weightdroid.dialog;
+
+import java.text.DecimalFormat;
+
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v4.app.DialogFragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import eu.quitzau.android.weightdroid.PreferenceConstants;
+import eu.quitzau.android.weightdroid.R;
+
+public class BMIDialog extends DialogFragment {
+
+	private static final DecimalFormat NUMBER_FORMAT = new DecimalFormat("0.##");
+
+	public static BMIDialog newInstance(float weight) {
+		BMIDialog bmiDialog = new BMIDialog();
+		Bundle args = new Bundle();
+		args.putFloat("weight", weight);
+		bmiDialog.setArguments(args);
+		return bmiDialog;
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+	}
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = inflater.inflate(R.layout.bmi_details, container, false);
+		initializeLayout(v);
+		return v;
+	}
+
+	public void initializeLayout(View v) {
+
+		getDialog().setTitle(getString(R.string.bmiTitle));
+		float weight = getArguments().getFloat("weight");
+		TextView calculatedBMI = (TextView) v.findViewById(R.id.BMIDetails_BMI);
+
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+		float height = Float.parseFloat(sharedPreferences.getString(PreferenceConstants.USER_HEIGHT, "0"));
+		double calBmi = weight / (Math.pow((height * 0.01), 2));
+		calculatedBMI.setText(NUMBER_FORMAT.format(calBmi));
+		calculatedBMI.setTextColor(Color.DKGRAY);
+
+		TextView thisWeight = (TextView) v.findViewById(R.id.BMIDetails_WEIGHT);
+		thisWeight.setTextColor(Color.DKGRAY);
+		thisWeight.setText(NUMBER_FORMAT.format(weight));
+
+		TextView bmiCategory = (TextView) v.findViewById(R.id.BMIDetails_CATEGORY);
+		bmiCategory.setTextColor(Color.DKGRAY);
+		TextView underweightText = (TextView) v.findViewById(R.id.BMIDetails_weight_underweight);
+		underweightText.setTextColor(Color.DKGRAY);
+		TextView normalweightText = (TextView) v.findViewById(R.id.BMIDetails_weight_normalweight);
+		normalweightText.setTextColor(Color.DKGRAY);
+		TextView overweightText = (TextView) v.findViewById(R.id.BMIDetails_weight_overweight);
+		overweightText.setTextColor(Color.DKGRAY);
+		TextView heavyUnderweightText = (TextView) v.findViewById(R.id.BMIDetails_weight_heavyOverweight);
+		heavyUnderweightText.setTextColor(Color.DKGRAY);
+
+		TextView bmiDesc = (TextView) v.findViewById(R.id.BMIDetails_bmiDescription);
+		bmiDesc.setTextColor(Color.DKGRAY);
+		String underweight = "<" + calWeightFromBMI(18.5, height);
+		underweightText.setText(underweight);
+		String normalweight = calWeightFromBMI(18.5, height) + " - " + calWeightFromBMI(25, height);
+		normalweightText.setText(normalweight);
+		String overweight = calWeightFromBMI(25, height) + " - " + calWeightFromBMI(30, height);
+		overweightText.setText(overweight);
+		String heavyOverweight = ">" + calWeightFromBMI(30, height);
+		heavyUnderweightText.setText(heavyOverweight);
+
+		String infotableText = ".\n" + getString(R.string.infoTableText);
+
+		if (calBmi >= 30) {
+			bmiDesc.setText(getString(R.string.heavyOverWeight) + infotableText);
+			bmiCategory.setText(getString(R.string.heavyOverWeightCat));
+			heavyUnderweightText.setTextColor(Color.RED);
+
+		} else if (calBmi >= 25 && calBmi < 30) {
+			bmiDesc.setText(getString(R.string.overWeight) + infotableText);
+			bmiCategory.setText(getString(R.string.overWeightCat));
+			overweightText.setTextColor(Color.RED);
+
+		} else if (calBmi < 18.5) {
+			bmiDesc.setText(getString(R.string.underweightWeight) + infotableText);
+			bmiCategory.setText(getString(R.string.underweightWeightCat));
+			underweightText.setTextColor(Color.RED);
+
+		} else {
+			bmiDesc.setText(getString(R.string.normalweightWeight));
+			bmiCategory.setText(getString(R.string.normalweightWeightCat));
+			normalweightText.setTextColor(Color.GREEN);
+		}
+
+		Button closeButton = (Button) v.findViewById(R.id.BMIDetails_Closebutton);
+		closeButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				dismiss();
+			}
+		});
+
+	}
+
+	private String calWeightFromBMI(double bmi, float height) {
+		return NUMBER_FORMAT.format(bmi * (Math.pow((height * 0.01), 2)));
+	}
+
+}

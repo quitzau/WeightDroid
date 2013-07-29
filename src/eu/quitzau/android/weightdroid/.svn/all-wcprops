@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid
+END
+AbstractWeightDroidListActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/AbstractWeightDroidListActivity.java
+END
+PreferenceActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/PreferenceActivity.java
+END
+EmptyDialogOnClickListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/EmptyDialogOnClickListener.java
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/MainActivity.java
+END
+DetailLogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/DetailLogFragment.java
+END
+DetailLogActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/DetailLogActivity.java
+END
+GraphFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/GraphFragment.java
+END
+WeightWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/WeightWidget.java
+END
+FragmentLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/FragmentLayout.java
+END
+InputFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/InputFragment.java
+END
+BmiDetailDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/BmiDetailDialog.java
+END
+NoProfileOnClickListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/NoProfileOnClickListener.java
+END
+CheckableFrameLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/CheckableFrameLayout.java
+END
+PreferenceConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/Android/!svn/ver/3/WeightDroid/src/eu/quitzau/android/weightdroid/PreferenceConstants.java
+END
+LogFragment.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/LogFragment.java
+END
+AbstractWeightDroidActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/Android/!svn/ver/6/WeightDroid/src/eu/quitzau/android/weightdroid/AbstractWeightDroidActivity.java
+END

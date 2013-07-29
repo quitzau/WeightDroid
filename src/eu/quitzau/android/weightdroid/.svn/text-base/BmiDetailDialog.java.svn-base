@@ -1,0 +1,122 @@
+package eu.quitzau.android.weightdroid;
+
+import java.text.DecimalFormat;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.preference.PreferenceManager;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class BmiDetailDialog extends Dialog {
+	private static final DecimalFormat NUMBER_FORMAT = new DecimalFormat("0.##");
+
+	private Context context = null;
+	private float weight;
+
+	public BmiDetailDialog(Context context) {
+		super(context);
+		this.context = context;
+		setContentView(R.layout.bmi_details);
+		setTitle("BMI");
+		
+	}
+
+	public void setWeight(float weight)
+	{
+		this.weight = weight;
+		initializeLayout();
+	}
+
+	public void initializeLayout() {
+		
+		TextView calculatedBMI = (TextView) findViewById(R.id.BMIDetails_BMI);
+
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+		float height = Float.parseFloat(sharedPreferences.getString(PreferenceConstants.USER_HEIGHT, "0"));
+		double calBmi = weight / (Math.pow((height * 0.01), 2));
+		calculatedBMI.setText(NUMBER_FORMAT.format(calBmi));
+		calculatedBMI.setTextColor(Color.DKGRAY);
+
+		TextView thisWeight = (TextView) findViewById(R.id.BMIDetails_WEIGHT);
+		thisWeight.setTextColor(Color.DKGRAY);
+		thisWeight.setText(NUMBER_FORMAT.format(weight));
+
+		TextView bmiCategory = (TextView) findViewById(R.id.BMIDetails_CATEGORY);
+		bmiCategory.setTextColor(Color.DKGRAY);
+		TextView underweightText = (TextView) findViewById(R.id.BMIDetails_weight_underweight);
+		underweightText.setTextColor(Color.DKGRAY);
+		TextView normalweightText = (TextView) findViewById(R.id.BMIDetails_weight_normalweight);
+		normalweightText.setTextColor(Color.DKGRAY);
+		TextView overweightText = (TextView) findViewById(R.id.BMIDetails_weight_overweight);
+		overweightText.setTextColor(Color.DKGRAY);
+		TextView heavyUnderweightText = (TextView) findViewById(R.id.BMIDetails_weight_heavyOverweight);
+		heavyUnderweightText.setTextColor(Color.DKGRAY);
+
+		
+		
+		TextView bmiDesc = (TextView) findViewById(R.id.BMIDetails_bmiDescription);
+		bmiDesc.setTextColor(Color.DKGRAY);
+		String underweight = "<" + calWeightFromBMI(18.5, height);
+		underweightText.setText(underweight);
+		String normalweight = calWeightFromBMI(18.5, height) + " - " + calWeightFromBMI(25, height);
+		normalweightText.setText(normalweight);
+		String overweight = calWeightFromBMI(25, height) + " - " + calWeightFromBMI(30, height);
+		overweightText.setText(overweight);
+		String heavyOverweight = ">" + calWeightFromBMI(30, height);
+		heavyUnderweightText.setText(heavyOverweight);
+
+		String infotableText = ".\n" + context.getString(R.string.infoTableText);
+
+		if (calBmi >= 30) {
+			bmiDesc.setText(context.getString(R.string.heavyOverWeight) + infotableText);
+			bmiCategory.setText(context.getString(R.string.heavyOverWeightCat));
+			heavyUnderweightText.setTextColor(Color.RED);
+
+		} else if (calBmi >= 25 && calBmi < 30) {
+			bmiDesc.setText(context.getString(R.string.overWeight) + infotableText);
+			bmiCategory.setText(context.getString(R.string.overWeightCat));
+			overweightText.setTextColor(Color.RED);
+
+		} else if (calBmi < 18.5) {
+			bmiDesc.setText(context.getString(R.string.underweightWeight) + infotableText);
+			bmiCategory.setText(context.getString(R.string.underweightWeightCat));
+			underweightText.setTextColor(Color.RED);
+
+		} else {
+			bmiDesc.setText(context.getString(R.string.normalweightWeight));
+			bmiCategory.setText(context.getString(R.string.normalweightWeightCat));
+			normalweightText.setTextColor(Color.GREEN);
+		}
+
+		Button closeButton = (Button) findViewById(R.id.BMIDetails_Closebutton);
+		closeButton.setOnClickListener(new CloseListener(this));
+
+	}
+
+	private String calWeightFromBMI(double bmi, float height) {
+		return NUMBER_FORMAT.format(bmi * (Math.pow((height * 0.01), 2)));
+	}
+}
+
+class CloseListener implements OnClickListener {
+
+	private Dialog dialog;
+
+	public CloseListener(Dialog dialog) {
+
+		this.dialog = dialog;
+
+	}
+
+	public void onClick(View v) {
+
+		dialog.dismiss();
+
+	}
+
+}

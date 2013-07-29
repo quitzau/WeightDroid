@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="spacer">: </string>
+	<string name="appName">WeightDroid</string>
+	<string name="profileTitle">Profile</string>
+	<string name="logTitle">Log</string>
+	<string name="graphTitle">Graph</string>
+	<string name="inputTitle">Input</string>
+	<string name="menuPreferences">Possibilities</string>
+	<string name="preferences">Preferences</string>
+	<string name="import_export">Import/Export</string>
+	<string name="month">Month</string>
+	<string name="all">All</string>
+	<string name="weightLabel">Weight</string>
+	<string name="delete">Delete</string>
+	<string name="save">Save</string>
+	<string name="import_">Import</string>
+	<string name="export">Export</string>
+	<string name="importError">Could not read</string>
+	<string name="exportError">Could not write</string>
+	<string name="filepath">/sdcard/weightdroid/weightdroid.csv</string>
+	<string name="exportedTo">Data exported to</string>
+	<string name="update">Update</string>
+	<string name="dataFrom">data from</string>
+	<string name="details">Details</string>
+	<string name="close">Close</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="none">None</string>
+	<string name="calculatedBMI">Calculated BMI</string>
+	<string name="numbersError">Preference may only contain digits</string>
+
+
+	<string name="confirm_delete_word_msg">Are you certain that you will delete all logs</string>
+	<string name="weightgraph">Weight</string>
+	<string name="weight">Weight (kg)</string>
+	<string name="size">Size (cm)</string>
+	<string name="date">Date</string>
+	<string name="today">Today</string>
+	<string name="weightLogs">Saved weights: </string>
+	<string name="lastWeightLog">Last saved: </string>
+
+	<string name="chooseDate">Select date</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="error">Error</string>
+	<string name="warning">Warning</string>
+	<string name="deletingAll">Deleting all saved weight logs ?</string>
+	<string name="log">Log</string>
+	<string name="graph">Graph</string>
+	<string name="settings">Settings</string>
+	<string name="fillWeight">You have to type weight!</string>
+	<string name="fillDate">You must fill date</string>
+	<string name="fillProfile">No profile</string>
+	<string name="fillProfileDetails">Create profile before saving weight data</string>
+	<string name="infoTableText">Look at the list to see BMI information</string>
+	<string name="profile">Profile</string>
+	<string name="name">Name</string>
+	<string name="yourName">Your name</string>
+	<string name="height">Height (cm)</string>
+	<string name="weightGoal">Weight goal</string>
+	<string name="weightGoalSummary">Set your weight goal (kg)</string>
+	<string name="weightGoalKilo">Weight goal (kg)</string>
+	<string name="showSizeSummary">Show waist size input field</string>
+	<string name="customize">Customization</string>
+	<string name="showSize">Show waist size</string>
+	<string name="backupTitle">Backup</string>
+	<string name="autoBackup">Auto backup</string>
+	<string name="autoBackupSummary">WeightDroid will automatically backup data every week</string>
+	<string name="time">Time</string>
+	<string name="logDetails">Log details</string>
+	<string name="noweightlogs">No entries</string>
+	<string name="deleteAllLogs">Delete all weights</string>
+	<string name="allLogs">All</string>
+	<string name="lastMonthLogs">Last month</string>
+	<!-- BMI -->
+	<string name="bmiTitle">Calculated BMI</string>
+	<string name="bmicat">BMI category</string>
+	<string name="heavyOverWeight">You are severely overweight</string>
+	<string name="heavyOverWeightCat">Severely overweight</string>
+	<string name="overWeight">You are moderately overweight</string>
+	<string name="overWeightCat">Moderately overweight</string>
+	<string name="underweightWeight">You are underweight</string>
+	<string name="underweightWeightCat">Underweight</string>
+	<string name="normalweightWeight">Your weight are normal</string>
+	<string name="normalweightWeightCat">Normalweight</string>
+</resources>

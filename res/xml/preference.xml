@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	 <PreferenceCategory android:title="@string/profileTitle">
+		<EditTextPreference android:key="user" android:title="@string/name" android:summary="@string/yourName"/>
+		<EditTextPreference android:key="userHeight" android:title="@string/height" android:summary="@string/height"/>
+		<EditTextPreference android:key="userWeightGoal" android:title="@string/weightGoal" android:summary="@string/weightGoalSummary" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/customize">
+		<CheckBoxPreference android:key="showSize" android:title="@string/showSize" android:summary="@string/showSizeSummary" android:defaultValue="false" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/backupTitle">
+		<CheckBoxPreference android:key="autoBackup" android:title="@string/autoBackup" android:summary="@string/autoBackupSummary" android:defaultValue="true" />
+	</PreferenceCategory>
+	
+</PreferenceScreen>

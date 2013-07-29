@@ -1,0 +1,50 @@
+package eu.quitzau.android.weightdroid;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import eu.quitzau.android.weightdroid.persistence.WeightDAO;
+import eu.quitzau.android.weightdroid.utilities.GraphWebHandler;
+
+public class GraphFragment extends Fragment {
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+	}
+
+	private GraphWebHandler myhandler;
+	private WebView webview;
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		webview = (WebView) inflater.inflate(R.layout.graph_webview, container, false);
+		WeightDAO weightDAO = WeightDAO.getInstance(getActivity().getApplicationContext());
+		
+		myhandler = new GraphWebHandler(getActivity().getApplicationContext(),  webview);
+		myhandler.setWeights(weightDAO.getAllWeightDataForCurrentProfile());
+		String title = getGraphTitle(R.string.all);
+		myhandler.setTitle(title);
+		WebSettings settings = webview.getSettings();
+		settings.setJavaScriptEnabled(true);
+		settings.setBuiltInZoomControls(true);
+		webview.requestFocusFromTouch();
+		webview.setWebViewClient(new WebViewClient());
+		webview.setWebChromeClient(new WebChromeClient());
+		webview.addJavascriptInterface(myhandler, "Android");
+		webview.loadUrl("file:///android_asset/html/dynamic.html");
+		return webview;
+	}
+	
+	private String getGraphTitle(int resId) {
+		return getString(R.string.graphTitle) + " - " + getString(resId);
+	}
+
+
+}

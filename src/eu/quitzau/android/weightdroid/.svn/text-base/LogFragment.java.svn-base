@@ -1,0 +1,82 @@
+package eu.quitzau.android.weightdroid;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import eu.quitzau.android.weightdroid.dto.WeightDTO;
+import eu.quitzau.android.weightdroid.persistence.WeightDAO;
+
+public class LogFragment extends ListFragment {
+
+	private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM-yyyy");
+
+	boolean mDualPane;
+	int mCurCheckPosition = 0;
+
+	@Override
+	public void onActivityCreated(Bundle savedState) {
+		super.onActivityCreated(savedState);
+		List<WeightDTO> weightDatas = WeightDAO.getInstance(getActivity().getApplicationContext()).getAllWeightDataForCurrentProfile();
+		List<String> list = new ArrayList<String>();
+		for (WeightDTO weight : weightDatas) {
+			list.add(simpleDateFormat.format(weight.getDate()) + " " + weight.getWeight());
+		}
+
+		setListAdapter(new ArrayAdapter<String>(getActivity(), R.layout.log_list, R.id.logtext, list));
+
+		View detailsFrame = getActivity().findViewById(R.id.details);
+		mDualPane = detailsFrame != null && detailsFrame.getVisibility() == View.VISIBLE;
+
+		if (savedState != null) {
+			// Restore last state for checked position.
+			mCurCheckPosition = savedState.getInt("curChoice", 0);
+		}
+
+		if (mDualPane) {
+			// In dual-pane mode, list view highlights selected item.
+			getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+			// Make sure our UI is in the correct state.
+			showDetails(mCurCheckPosition);
+		}
+	}
+
+	void showDetails(int index) {
+		mCurCheckPosition = index;
+
+		if (mDualPane) {
+			// We can display everything in-place with fragments.
+			// Have the list highlight this item and show the data.
+			getListView().setItemChecked(index, true);
+
+			// Check what fragment is shown, replace if needed.
+			DetailLogFragment details = (DetailLogFragment) getFragmentManager().findFragmentById(R.id.details);
+			if (details == null || details.getShownIndex() != index) {
+				// Make new fragment to show this selection.
+				details = DetailLogFragment.newInstance(index);
+
+				// Execute a transaction, replacing any existing
+				// fragment with this one inside the frame.
+				FragmentTransaction ft = getFragmentManager().beginTransaction();
+				ft.replace(R.id.details, details);
+				ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+				ft.commit();
+			}
+
+		} else {
+			// Otherwise we need to launch a new activity to display
+			// the dialog fragment with selected text.
+			Intent intent = new Intent();
+			intent.setClass(getActivity(), DetailLogActivity.class);
+			intent.putExtra("index", index);
+			startActivity(intent);
+		}
+	}
+}

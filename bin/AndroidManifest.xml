@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="eu.quitzau.android.weightdroid"
+    android:versionCode="6"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/weightdroid_launcher"
+        android:label="@string/appName" >
+        <activity
+            android:name="MainActivity"
+            android:label="WeightDroid"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeHolo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="PreferenceActivity" android:screenOrientation="portrait" android:theme="@style/ThemeHolo">
+        </activity>
+
+        <!--
+		<activity android:name="InputActivity"></activity>		
+		<activity android:name="LogActivity" android:label="@string/log" android:theme="@style/Theme.Sherlock.Light"></activity>
+		<activity android:name="GraphCanvasActivity" android:theme="@style/Theme.Sherlock.Light"></activity>
+		<activity android:name="GraphWebViewActivity" android:theme="@style/Theme.Sherlock.Light"></activity>
+        -->
+        <receiver android:name="WeightWidget" >
+            <activity android:name="MainActivity" >
+            </activity>
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidgetproviderinfo" />
+        </receiver>
+    </application>
+
+</manifest>

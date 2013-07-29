@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="300dip" android:orientation="vertical" android:layout_gravity="center" android:layout_height="wrap_content"  android:background="#FFFFFF">
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="297dip" android:layout_height="wrap_content" android:padding="3dip">
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:layout_width="wrap_content" android:width="150dip" android:text="@string/calculatedBMI" android:layout_height="wrap_content" android:id="@+id/bmiLabel"></TextView>
+			<TextView android:layout_width="wrap_content" android:text="1" android:textStyle="bold" android:layout_height="wrap_content" android:id="@+id/BMIDetails_BMI"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:layout_width="wrap_content" android:text="@string/weight" android:layout_height="wrap_content" android:id="@+id/weightLabel"></TextView>
+			<TextView android:layout_width="wrap_content" android:text="1" android:layout_height="wrap_content" android:textStyle="bold" android:id="@+id/BMIDetails_WEIGHT"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:layout_width="wrap_content" android:text="@string/bmicat" android:layout_height="wrap_content" android:id="@+id/bmicategoryLabel"></TextView>
+			<TextView android:layout_width="wrap_content" android:text="1" android:layout_height="wrap_content" android:textStyle="bold" android:id="@+id/BMIDetails_CATEGORY"></TextView>
+		</TableRow>
+	</TableLayout>
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="297dip" android:layout_height="wrap_content" android:padding="3dip">
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:layout_width="wrap_content" android:text="1" android:layout_height="wrap_content" android:id="@+id/BMIDetails_bmiDescription" android:textSize="10dip"></TextView>
+		</TableRow>
+	</TableLayout>
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="297dip" android:layout_height="wrap_content" android:padding="3dip">
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:text="@string/underweightWeightCat" android:width="150dip" android:id="@+id/BMIDetails_header_underweight" android:layout_height="wrap_content" android:layout_margin="1dip"></TextView>
+			<TextView android:text="1" android:id="@+id/BMIDetails_weight_underweight" android:layout_height="fill_parent" android:gravity="left" android:layout_margin="1dip"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:text="@string/normalweightWeightCat" android:id="@+id/BMIDetails_header_normalweight" android:layout_height="wrap_content" android:layout_margin="1dip"></TextView>
+			<TextView android:text="1" android:id="@+id/BMIDetails_weight_normalweight" android:layout_height="fill_parent" android:gravity="left" android:layout_margin="1dip"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:text="@string/overWeightCat" android:id="@+id/BMIDetails_header_overweight" android:layout_height="wrap_content" android:layout_margin="1dip"></TextView>
+			<TextView android:text="1" android:id="@+id/BMIDetails_weight_overweight" android:layout_height="fill_parent" android:gravity="left" android:layout_margin="1dip"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="fill_parent">
+			<TextView android:text="@string/heavyOverWeightCat" android:id="@+id/BMIDetails_header_heavyOverweight" android:layout_height="wrap_content" android:layout_margin="1dip"></TextView>
+			<TextView android:text="1" android:id="@+id/BMIDetails_weight_heavyOverweight" android:layout_height="fill_parent" android:gravity="left" android:layout_margin="1dip"></TextView>
+		</TableRow>
+	</TableLayout>
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="3dip">
+		<TableRow android:layout_width="fill_parent">
+			<Button android:id="@+id/BMIDetails_Closebutton" android:layout_width="292dip" android:text="@string/close" android:layout_height="wrap_content"></Button>
+		</TableRow>
+	</TableLayout>
+</LinearLayout>

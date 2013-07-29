@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GraphLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    
+    >
+ 
+  <RadioGroup android:orientation="horizontal" android:gravity="center_horizontal" >
+    <RadioButton
+        android:id="@+id/GraphAllButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all" />
+
+    <RadioButton
+        android:id="@+id/GraphLastMonthButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lastMonthLogs" />
+</RadioGroup>
+<TableRow android:gravity="center_horizontal">
+    <WebView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/GraphBrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</TableRow>
+</TableLayout>

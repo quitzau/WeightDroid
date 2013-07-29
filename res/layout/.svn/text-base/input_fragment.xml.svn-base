@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/input_ui" android:layout_width="fill_parent" android:layout_height="fill_parent" >
+		<TextView android:text="@string/weight" android:id="@+id/Main_WeightLabel" android:paddingLeft="10dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingTop="10dip"/>
+		<EditText android:id="@+id/Main_WeightEditText" android:inputType="numberDecimal" android:gravity="right" android:layout_marginLeft="5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Main_WeightLabel"/>
+		<TextView android:id="@+id/Main_SizeLabel" android:text="@string/size" android:paddingLeft="10dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Main_WeightEditText"/>
+		<EditText android:id="@+id/Main_SizeEditText" android:inputType="numberDecimal" android:gravity="right" android:layout_marginLeft="5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Main_SizeLabel"/>
+		<TextView android:text="@string/date" android:id="@+id/TextView03" android:paddingLeft="10dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Main_SizeEditText"/>
+		<DatePicker android:id="@+id/Main_DatePicker" android:spinnersShown="true" android:calendarViewShown="false" android:gravity="right" android:paddingBottom="5dip" android:layout_marginLeft="5dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/TextView03"/>
+		<Button android:layout_height="wrap_content" android:text="@string/save"  android:layout_marginBottom="5dip" android:layout_width="fill_parent" android:id="@+id/Main_WeightSubmitButton" android:layout_below="@id/Main_DatePicker"/>
+		<View android:id="@+id/Main_Spacer" android:layout_height="1dip" android:background="@color/honeycombish_blue" android:layout_width="fill_parent" android:layout_below="@id/Main_WeightSubmitButton"/>
+		<RelativeLayout android:id="@+id/Main_WeightLogsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Main_Spacer">
+			<TextView android:text="" android:id="@+id/Main_WeightLogs" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentRight="true" android:paddingRight="5dip"/>
+			<TextView android:id="@+id/Main_WeightLogsLabel" android:text="@string/weightLogs" android:layout_height="wrap_content" android:paddingLeft="5dip" android:paddingBottom="5dip" android:paddingRight="5dip" android:layout_width="wrap_content" android:layout_alignParentLeft="true" android:layout_toLeftOf="@id/Main_WeightLogs"/>
+		</RelativeLayout>
+		<RelativeLayout android:id="@+id/Main_LastWeightLogsLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/Main_WeightLogsLayout">
+			<TextView android:text="" android:id="@+id/Main_LastWeightLog" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentRight="true" android:paddingRight="5dip"/>
+			<TextView android:id="@+id/Main_LastWeightLogLabel" android:text="@string/lastWeightLog" android:paddingLeft="5dip" android:paddingRight="5dip" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentLeft="true" android:layout_toLeftOf="@id/Main_LastWeightLog"/>
+		</RelativeLayout>
+</RelativeLayout>

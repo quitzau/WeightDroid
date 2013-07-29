@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:orientation="vertical" android:layout_gravity="center" android:layout_height="wrap_content" android:background="@drawable/widget"
+	android:id="@+id/WidgetParent">
+	<TextView android:id="@+id/WidgetTitle" android:text="@string/appName" android:paddingLeft="40dip" android:textSize="14dip" android:textColor="@color/green" android:paddingTop="1dip" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+	
+	<TextView android:id="@+id/WidgetLastWeightLabel" android:text="@string/weightLogs" android:textStyle="bold" android:textColor="@color/defaultTextColor" android:textSize="10dip" android:paddingLeft="20dip" android:paddingTop="0dip" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+	<TextView android:id="@+id/WidgetLastWeight" android:text="" android:textSize="10dip" android:textColor="@color/defaultTextColor" android:paddingLeft="20dip" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+	
+	<TextView android:id="@+id/WidgetLastDateLabel" android:text="@string/lastWeightLog" android:textStyle="bold" android:textColor="@color/defaultTextColor" android:textSize="10dip" android:paddingLeft="20dip" android:paddingTop="0dip" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+	<TextView android:id="@+id/WidgetLastDate" android:text="" android:paddingLeft="20dip" android:textSize="10dip" android:textColor="@color/defaultTextColor" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+</LinearLayout>

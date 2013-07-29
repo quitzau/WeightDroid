@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:id="@+id/TableLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"  android:background="#FFFFFF">
+	<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:text="@string/weightLabel" android:id="@+id/TextView01"  android:paddingLeft="15dip"/>
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<EditText android:id="@+id/LogUpdate_weight" android:numeric="decimal" android:gravity="right" android:layout_marginLeft="10dip" />
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:text="@string/size" android:id="@+id/TextView02" android:paddingLeft="15dip" />
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<EditText android:id="@+id/LogUpdate_size" android:numeric="decimal" android:gravity="right" android:layout_marginLeft="10dip" />
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:text="@string/date" android:id="@+id/TextView03" android:paddingLeft="15dip" />
+	</TableRow>
+	<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<DatePicker android:id="@+id/LogUpdate_DatePicker" android:gravity="right" android:layout_marginLeft="10dip" />
+	</TableRow>
+	<TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<Button android:text="@string/ok" android:id="@+id/LogUpdate_Button_ok" android:layout_height="wrap_content"/>
+	</TableRow>
+	<TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<Button android:text="@string/cancel" android:id="@+id/LogUpdate_Button_cancel" android:layout_height="wrap_content"/>
+	</TableRow>
+
+
+</TableLayout>

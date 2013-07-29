@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="spacer">: </string>
+	<string name="appName">WeightDroid</string>
+	<string name="profileTitle">Profil</string>
+	<string name="logTitle">Log</string>
+	<string name="graphTitle">Graf</string>
+	<string name="inputTitle">Indsæt</string>
+	<string name="month">Måned</string>
+	<string name="all">Alle</string>
+	<string name="menuPreferences">Muligheder</string>
+	<string name="preferences">Opsætning</string>
+	<string name="import_export">Importer/Eksporter</string>
+	
+	<string name="weightLabel">Vægt</string>
+	
+	<string name="delete">Slet</string>
+	<string name="save">Gem</string>
+	<string name="import_">Importer</string>
+	<string name="importError">Kan ikke læse filen</string>
+	<string name="exportError">Kan ikke skrive til filen</string>
+	<string name="filepath">/sdcard/weightdroid/weightdroid.csv</string>
+	<string name="exportedTo">Data er eksporteret til</string>
+	
+	<string name="export">Eksporter</string>
+	<string name="update">Opdater</string>
+	<string name="dataFrom">data fra</string>
+	<string name="details">Detaljer</string>
+	<string name="close">Luk</string>
+	<string name="yes">Ja</string>
+	<string name="no">Nej</string>
+	<string name="none">Ingen</string>
+	<string name="calculatedBMI">Beregnet BMI</string>
+	
+	<string name="confirm_delete_word_msg">Er du sikker på at du vil slette</string>
+	<string name="weightgraph">Vægt</string>
+	<string name="weight">Vægt (kg)</string>
+	<string name="size">Størrelse (cm om livet)</string>
+	<string name="date">Dato</string>
+	<string name="today">I dag</string>
+	<string name="weightLogs">Antal indtastninger: </string>
+	<string name="lastWeightLog">Sidste indtastning: </string>
+	<string name="chooseDate">Vælg dato</string>
+	<string name="ok">Ok</string>
+	<string name="cancel">Annuller</string>
+	<string name="error">Fejl</string>
+	<string name="warning">Advarsel</string>
+	<string name="deletingAll">Du er igang med at slette alle gemte vægt oplysninger for profilen, er du sikker</string>
+	<string name="log">Log</string>
+	<string name="graph">Graf</string>
+	<string name="settings">Indstillinger</string>
+	<string name="fillWeight">Vægt skal udfyldes!</string>
+	<string name="fillDate">Dato skal udfyldes når der ikke vælges i dag</string>
+	<string name="fillProfile">Ingen profil</string>
+	<string name="fillProfileDetails">Opret en profil inden du tilføjer vægt</string>
+	<string name="infoTableText">Se listen, som indeholder information om dine vægtgrænser i forhold til BMI</string>
+	<string name="profile">Profil</string>
+	<string name="numbersError">Dette felt må kun indeholde tal</string>
+	<string name="name">Navn</string>
+	<string name="yourName">Dit navn</string>
+	<string name="height">Højde (cm)</string>
+	<string name="weightGoal">Vægtmål</string>
+	<string name="weightGoalSummary">Her kan du sætte dit vægtmål (kg)</string>
+	<string name="weightGoalKilo">Vægtmål (kg)</string>
+	<string name="showSizeSummary">Vis input felt til talje mål</string>
+	<string name="customize">Tilpasning</string>
+	<string name="showSize">Vis talje mål</string>
+	<string name="backupTitle">Backup</string>
+	<string name="autoBackup">Automatisk backup</string>
+	<string name="autoBackupSummary">WeightDroid vil automatisk lave backup af data hver uge</string>
+	
+	<string name="time">Tid</string>
+	<string name="logDetails">Log detaljer</string>
+	<string name="noweightlogs">Ingen indtastninger</string>
+	<string name="deleteAllLogs">Slet alle logs</string>
+	<string name="allLogs">Alle</string>
+	<string name="lastMonthLogs">Sidste måned</string>	
+	<!-- BMI -->
+	<string name="bmiTitle">Beregnet BMI</string>	
+	<string name="bmicat">BMI kategori</string>
+	<string name="heavyOverWeight">Du er svært overvægtig</string>	
+	<string name="heavyOverWeightCat">Svært overvægtig</string>	
+	<string name="overWeight">Du er moderat overvægtig</string>	
+	<string name="overWeightCat">Moderat overvægtig</string>	
+	<string name="underweightWeight">Du er undervægtig</string>	
+	<string name="underweightWeightCat">Undervægtig</string>	
+	<string name="normalweightWeight">Din vægt er helt normal</string>	
+	<string name="normalweightWeightCat">Normalvægt</string>	
+</resources>
